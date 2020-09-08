@@ -1,7 +1,7 @@
 # Creating Astronomical Data Cube Movies
 Short tutorial on displaying an astronomical FITS datacubes
 
-[![](ngc2841thumb.jpg)](https://www.spacetelescope.org/images/heic1104a/) Below is a short tutorial for making a movie of an astronomical data cube. It can be expanded upon with a number of useful Python modules (some are listed below). [Jeff Mangum](http://www.cv.nrao.edu/~jmangum/) and I have been experimenting with various ways of doing this while minimizing the amount of code needed. In addition to walking through this short tutorial and providing the script, a number of useful links are provided at the end. The following video is a slightly more complex example with a number of features available in APLpy: 
+[![](ngc2841thumb.jpg)](https://www.spacetelescope.org/images/heic1104a/) Below is a short tutorial for making a movie of an astronomical data cube. It can be expanded upon with a number of useful Python modules (some are listed below). [Jeff Mangum](http://www.cv.nrao.edu/~jmangum/) and I have been experimenting with various ways of doing this while minimizing the amount of code needed. In addition to walking through this short tutorial and providing the script, a number of useful links are provided at the end. The following video is a slightly more complex example with a number of features available in APLpy: [Video display](https://www.youtube.com/watch?v=EdHLyM4MQrg)
 
 Data used: [Infrared](http://irsa.ipac.caltech.edu/data/SPITZER/SINGS/galaxies/ngc2841.html) | [Very Large Array](http://www.mpia.de/THINGS/Data_files/NGC_2841_NA_CUBE_THINGS.FITS) | [Digital Sky Survey](http://skyview.gsfc.nasa.gov/current/cgi/titlepage.pl)
 
