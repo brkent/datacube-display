@@ -1,5 +1,5 @@
-#Data Cube movie - Brian Kent and Jeff Mangum, NRAO
-#September 2015
+# Data Cube movie - Brian Kent and Jeff Mangum, NRAO
+# September 2015
 import os, sys, string, matplotlib, aplpy
 
 import matplotlib.pyplot as plt
@@ -8,13 +8,14 @@ import pylab as py
 from matplotlib import colors, cm
 from astropy.io import fits
 
-#File name, number of channels, and header information
-filename='NGC_2841_NA_CUBE_THINGS.FITS'
-nchan=128
+# File name, number of channels, and header information
+# Data from: http://www.mpia.de/THINGS/Data_files/NGC_2841_NA_CUBE_THINGS.FITS
+filename = 'NGC_2841_NA_CUBE_THINGS.FITS'
+nchan = 128
 hdulist = fits.open(filename)  # open a FITS file
 prihdr = hdulist[0].header           # the primary HDU header
 
-#Colormap I like to use
+# Colormap I like to use
 cdict_bkcmap={
     'red'  :  ((0., 0., 0.), (0.25,0.,0.), (0.5,1.,1.), (0.75,1.0,1.0),  (1., 1., 1.)),
     'green':  ((0., 0., 0.), (0.25,0.,0.), (0.5,0.,0.), (0.75,1.0,1.0),  (1., 1., 1.)),
@@ -24,18 +25,18 @@ cdict_bkcmap={
 bkcmap = matplotlib.colors.LinearSegmentedColormap('bkcmap', cdict_bkcmap,1024)
 
 # FITS coordinates for marking the spectral box rectangle
-raminbox = 462-11
-ramaxbox = 462+11
-decminbox = 575-11
-decmaxbox = 575+11
+raminbox = 462 - 11
+ramaxbox = 462 + 11
+decminbox = 575 - 11
+decmaxbox = 575 + 11
 
 # Create 1D arrays for an averaged spectrum and velocity array
-img=fits.getdata(filename)
+img = fits.getdata(filename)
 spectrum = [np.mean(img[0,i,decminbox:decmaxbox,raminbox:ramaxbox])*1000.0 for i in range(0,nchan)]
 velocity = [(prihdr['CRVAL3'] + prihdr['CDELT3']*(i+prihdr['CRPIX3']))/1000.0 for i in range(0,nchan)]
 
 #Create figure canvas
-fig=plt.figure(facecolor='w', edgecolor='w', frameon=True, figsize=(6,7))
+fig = plt.figure(facecolor='w', edgecolor='w', frameon=True, figsize=(6,7))
 
 #Remove old PNG frames
 print 'WARNING: Removing old *.png files from pngs directory...'
