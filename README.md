@@ -136,7 +136,7 @@ Alternatively, one can use [Blender](http://www.cv.nrao.edu/~bkent/blender/) or 
 #### Download Script and Result
 
 *   Final animation: [Animated GIF](animateNGC2841.gif)
-*   Example script: [Python script](datacube.py)
+*   Example script: [Python script](https://github.com/brkent/datacube-display/blob/main/datacube.py)
 
 #### Links
 
